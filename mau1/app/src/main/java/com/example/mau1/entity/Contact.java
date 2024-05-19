@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Contact_PhungTienViet {
+public class Contact {
     @PrimaryKey(autoGenerate = true)
 
     private int id;
@@ -12,12 +12,12 @@ public class Contact_PhungTienViet {
     private String number;
 
 
-    public Contact_PhungTienViet(int id, String name, String number) {
-        this.id=id;
+    public Contact(int id, String name, String number) {
+        this.id = id;
         this.name = name;
         this.number = number;
-    }
 
+    }
 
     public int getId() {
         return id;
@@ -45,7 +45,7 @@ public class Contact_PhungTienViet {
 
     @Override
     public String toString() {
-        return "Contact_PhungTienViet{" +
+        return "Contact{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", number='" + number + '\'' +

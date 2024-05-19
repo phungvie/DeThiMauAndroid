@@ -2,12 +2,9 @@ package com.example.mau1.database;
 
 import android.content.Context;
 
-import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.migration.Migration;
-import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.mau1.DAO.ContactDAO;
 import com.example.mau1.entity.Contact;
