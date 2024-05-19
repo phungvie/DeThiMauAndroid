@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,13 +7,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/AppBarLayout"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+
+<!--layout_above: Đặt thành phần ở phía trên của thành phần được chỉ định bởi ID.
+layout_below: Đặt thành phần ở phía dưới của thành phần được chỉ định bởi ID.
+layout_toLeftOf: Đặt thành phần ở phía bên trái của thành phần được chỉ định bởi ID.
+layout_toRightOf: Đặt thành phần ở phía bên phải của thành phần được chỉ định bởi ID.
+layout_toStartOf: Đặt thành phần ở phía bên start (bắt đầu) của thành phần được chỉ định bởi ID (hỗ trợ ngôn ngữ từ phải sang trái).
+layout_toEndOf: Đặt thành phần ở phía bên end (kết thúc) của thành phần được chỉ định bởi ID (hỗ trợ ngôn ngữ từ phải sang trái).
+layout_alignTop: Canh trên của thành phần với cạnh trên của thành phần được chỉ định bởi ID.
+layout_alignBottom: Canh dưới của thành phần với cạnh dưới của thành phần được chỉ định bởi ID.
+layout_alignLeft: Canh trái của thành phần với cạnh trái của thành phần được chỉ định bởi ID.
+layout_alignRight: Canh phải của thành phần với cạnh phải của thành phần được chỉ định bởi ID.
+layout_alignStart: Canh start của thành phần với cạnh start của thành phần được chỉ định bởi ID.
+layout_alignEnd: Canh end của thành phần với cạnh end của thành phần được chỉ định bởi ID.
+layout_alignParentTop: Canh trên của thành phần với cạnh trên của bố cục cha (parent).
+layout_alignParentBottom: Canh dưới của thành phần với cạnh dưới của bố cục cha (parent).
+layout_alignParentLeft: Canh trái của thành phần với cạnh trái của bố cục cha (parent).
+layout_alignParentRight: Canh phải của thành phần với cạnh phải của bố cục cha (parent).
+layout_alignParentStart: Canh start của thành phần với cạnh start của bố cục cha (parent).
+layout_alignParentEnd: Canh end của thành phần với cạnh end của bố cục cha (parent).
+layout_centerHorizontal: Đặt thành phần vào giữa theo chiều ngang của bố cục cha (parent).
+layout_centerVertical: Đặt thành phần vào giữa theo chiều dọc của bố cục cha (parent).
+layout_centerInParent: Đặt thành phần vào giữa cả theo chiều ngang và chiều dọc của bố cục cha (parent).-->

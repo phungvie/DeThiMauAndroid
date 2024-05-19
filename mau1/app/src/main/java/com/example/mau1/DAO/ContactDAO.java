@@ -10,7 +10,7 @@ import com.example.mau1.entity.Contact;
 import java.util.List;
 
 @Dao
-public interface ContactDAO {
+public interface ContactDAO{
     @Query("SELECT * FROM Contact")
     List<Contact> getAll();
 
@@ -25,4 +25,6 @@ public interface ContactDAO {
 
     @Delete
     void delete(Contact contact);
+    @Query("DELETE FROM Contact")
+    void deleteAll();
 }

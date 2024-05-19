@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Contact {
+public class Contact implements Comparable<Contact>  {
     @PrimaryKey(autoGenerate = true)
 
     private int id;
@@ -50,5 +50,10 @@ public class Contact {
                 ", name='" + name + '\'' +
                 ", number='" + number + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Contact o) {
+        return this.name.compareTo(o.getName());
     }
 }
